@@ -1,7 +1,7 @@
 {
   "name": "interactive-map",
   "version": "0.1.0",
-  "homepage": "https://siddhantshah1.github.io/SKMTHL/",
+  "homepage": "https://siddhantshah1.github.io/suryanepal-demo/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.2",
