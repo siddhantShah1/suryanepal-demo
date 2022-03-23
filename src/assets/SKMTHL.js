@@ -1,53 +1,6 @@
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableRow,
-  TableCell,
-} from "@mui/material";
 import * as React from "react";
-import data from "./SKMTHL.json";
-import { tableCellClasses } from "@mui/material/TableCell";
-import { styled } from "@mui/material/styles";
 
-const SKMTHL = (props) => {
-  const [selectedWD, setSelectedWD] = React.useState("");
-  const [selectedData, setSelectedData] = React.useState();
-  const checkData = (marketName) => {
-    return data
-      .map((object) => {
-        if (object["MARKET NAME"] === marketName) {
-          return object;
-        }
-      })
-      .filter((y) => y !== undefined);
-  };
-
-  const handleJSONdata = (marketName) => {
-    const chosenData = checkData(marketName);
-    setSelectedWD(chosenData[0]["MARKET NAME"]);
-    setSelectedData(chosenData[0]);
-  };
-  //   console.log(selectedData);
-  const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
-    },
-  }));
-
-  const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    "&:last-child td, &:last-child th": {
-      border: 0,
-    },
-  }));
+const SKMTHL = ({ handleJSONdata, selectedWD }) => {
   return (
     <>
       <svg
@@ -59,7 +12,6 @@ const SKMTHL = (props) => {
         }}
         xmlSpace="preserve"
         //   preserveAspectRatio="none"
-        {...props}
       >
         <style>
           {
@@ -198,38 +150,6 @@ const SKMTHL = (props) => {
           </text>
         </g>
       </svg>
-      {selectedData && (
-        <Table>
-          <>
-            <TableHead sx={{}}>
-              <TableRow>
-                {Object.keys(selectedData).map((header) => {
-                  return <StyledTableCell>{header}</StyledTableCell>;
-                })}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <StyledTableRow
-                key={"wd"}
-                sx={{
-                  "&:last-child td, &:last-child th": {
-                    borderColor: "red",
-                    borderWidth: 2,
-                  },
-                }}
-              >
-                {Object.values(selectedData).map((value) => {
-                  return (
-                    <TableCell component="th" scope="row">
-                      {value}
-                    </TableCell>
-                  );
-                })}
-              </StyledTableRow>
-            </TableBody>
-          </>
-        </Table>
-      )}
     </>
   );
 };
