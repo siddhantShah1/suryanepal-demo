@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/suryanepal-demo/static/css/main.e6c13ad2.css",
-    "main.js": "/suryanepal-demo/static/js/main.f5d41a3c.js",
+    "main.css": "/suryanepal-demo/static/css/main.e0fabd07.css",
+    "main.js": "/suryanepal-demo/static/js/main.194fcd40.js",
     "static/js/787.adb03a82.chunk.js": "/suryanepal-demo/static/js/787.adb03a82.chunk.js",
-    "static/media/compass.jpg": "/suryanepal-demo/static/media/compass.8972fa3f4f7e4d3db920.jpg",
     "index.html": "/suryanepal-demo/index.html",
-    "main.e6c13ad2.css.map": "/suryanepal-demo/static/css/main.e6c13ad2.css.map",
-    "main.f5d41a3c.js.map": "/suryanepal-demo/static/js/main.f5d41a3c.js.map",
+    "main.e0fabd07.css.map": "/suryanepal-demo/static/css/main.e0fabd07.css.map",
+    "main.194fcd40.js.map": "/suryanepal-demo/static/js/main.194fcd40.js.map",
     "787.adb03a82.chunk.js.map": "/suryanepal-demo/static/js/787.adb03a82.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.f5d41a3c.js"
+    "static/css/main.e0fabd07.css",
+    "static/js/main.194fcd40.js"
   ]
 }
