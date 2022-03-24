@@ -8,7 +8,7 @@ const SKMTHL = ({ handleJSONdata, selectedWD }) => {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 986 605"
         style={{
-          width: "80%",
+          width: "90%",
         }}
         xmlSpace="preserve"
         //   preserveAspectRatio="none"

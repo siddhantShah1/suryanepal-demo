@@ -1,15 +1,14 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
-import tableData from "../assets/SKMTHL.json";
+import { BhaktapurData } from "../data";
 import { useTable } from "react-table/dist/react-table.development";
 import { getColumns } from "./columns";
 import "./table.css";
-// import DataGrid from "react-data-grid";
 
 const MapTable = ({ selectedData, setSelectedWD }) => {
   const [columns, setColumns] = React.useState([]);
   React.useEffect(() => {
-    setColumns(getColumns(tableData[0]));
+    setColumns(getColumns(BhaktapurData[0]));
   }, []);
   const data = React.useMemo(() => [selectedData], []);
   const tableInstance = useTable({
